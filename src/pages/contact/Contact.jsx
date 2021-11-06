@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 // import ContactItem from '../Components/ContactItem';
 
@@ -22,12 +23,18 @@ export const MainLayout = styled.div`
 export const InnerLayout = styled.div`
     padding: 5rem 0;
 `;
+function onSubmit() {
+    console.log("sended data")
+}
+
 function Contact() {
     const phone = <PhoneIcon />
     const email = <EmailIcon />
     const location = <LocationOnIcon />
+    const linkedIN = <LinkedInIcon />
     return (
         <MainLayout>
+            <h3>Contact</h3>
             {/* <Title title={'Contact'} span={'Contact'} /> */}
             <ContactPageStyled >
                 <InnerLayout className={'contact-section'}>
@@ -56,9 +63,32 @@ function Contact() {
                                 {/* <PrimaryButton disabled title={'Send Email'} /> */}
                             </div>
                         </form>
+                        <div className="form-field">
+                            <button onClick={onSubmit}>Send Data</button>
+                        </div>
                     </div>
                     <div className="right-content">
-                        {/* <ContactItem title={'Phone'} icon={phone} cont1={'+216-25566952'} cont2={'+216-50557956'} />
+                        <div>
+                            <div>{phone}</div>
+                            <h6>Phone</h6>
+                            <p>+919479306254</p>
+                        </div>
+                        <div>
+                            <div>{linkedIN}</div>
+                            <h6>LindedIn</h6>
+                            <p>https://www.linkedin.com/in/prakash-pandey-b10143170/</p>
+                        </div>
+                        <div>
+                            <div>{email}</div>
+                            <h6>Email</h6>
+                            <p>prakashpandey1912@gmail.com</p>
+                        </div>
+                        <div>
+                            <div>{location}</div>
+                            <h6>Address</h6>
+                            <p>I 122/19 Shivagi Nagar Bhopal near Pragati Petrol Pump M.P.Nagar Bhopal</p>
+                        </div>
+                        {/* <ContactItem title={'Phone'} icon={phone} cont1={'+919479306254'}/>
                         <ContactItem title={'Email'} icon={email} cont1={'mchrif000@yandex.com'} cont2={'mchrif000@gmail.com'} />
                         <ContactItem title={'Address'} icon={location} cont1={'Tunisia, Bizerte'} cont2={'Tunis'} /> */}
 

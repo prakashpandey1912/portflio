@@ -113,6 +113,20 @@ h1{
     }
 }
 
+h2{
+    font-size: 3rem;
+    // color: var(--white-color);
+    span{
+        font-size: 4rem;
+        @media screen and (max-width: 502px){
+            font-size: 3rem
+        }
+    }
+    @media screen and (max-width: 502px){
+        font-size: 2rem
+    }
+}
+
 span{
     color: var(--primary-color);
 }
@@ -126,8 +140,10 @@ h6{
 .u-margin-bottom{
     margin-bottom: 4rem;
 }
-
-
+.centerDiv{
+    margin: 0 auto;
+    text-align: center;
+}
 //Floting Toggler
 .light-dark-mode{
     position: fixed;

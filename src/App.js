@@ -16,6 +16,7 @@ import Portfolio from './pages/portfolio/Portfolio'
 import Contact from './pages/contact/Contact'
 import Resume from './pages/resume/Resume'
 import Blogs from './pages/blogs/Blogs'
+// import Footer from './pages/footer/Footer';
 
 function App() {
   const [webSiteTheme, setTheme] = useState('dark')
@@ -53,7 +54,6 @@ function App() {
           </Routes>
         </BrowserRouter>
 
-
       </MainContentStyled>
     </div >
   );
@@ -62,7 +62,7 @@ function App() {
 
 const MainContentStyled = styled.main`
   position: relative;
-  margin-left: 16.3rem;
+  // margin-left: 16.3rem;
   min-height: 100vh;
   @media screen and (max-width:1200px){
     margin-left: 0;

@@ -4,25 +4,10 @@ import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
+import { MainLayout, InnerLayout } from '../../style/thyme'
 // import ContactItem from '../Components/ContactItem';
 
 
-export const MainLayout = styled.div`
-    padding: 5rem;
-    width:100%;
-    @media screen and (max-width: 642px){
-        padding: 4rem;
-    }
-    /* @media screen and (max-width: 510px){
-        padding: 3rem;
-    } */
-    @media screen and (max-width: 571px){
-        padding: 2rem .4rem;
-    }
-`;
-export const InnerLayout = styled.div`
-    padding: 5rem 0;
-`;
 function onSubmit() {
     console.log("sended data")
 }
@@ -34,7 +19,9 @@ function Contact() {
     const linkedIN = <LinkedInIcon />
     return (
         <MainLayout>
-            <h3>Contact</h3>
+            <div className="centerDiv">
+                <h2>Contact</h2>
+            </div>
             {/* <Title title={'Contact'} span={'Contact'} /> */}
             <ContactPageStyled >
                 <InnerLayout className={'contact-section'}>
@@ -120,7 +107,7 @@ const ContactPageStyled = styled.section`
         .contact-title{
             h4{
                 color: var(--white-color);
-                padding: 1rem 0;
+                padding: 0.5rem 0;
                 font-size: 1.8rem;
             }
         }
@@ -157,7 +144,7 @@ const ContactPageStyled = styled.section`
                     outline: none;
                     color: inherit;
                     width: 100%;
-                    padding: .8rem 1rem;
+                    padding: .7rem 1rem;
                 }
             }
 

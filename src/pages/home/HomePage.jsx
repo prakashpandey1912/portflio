@@ -15,16 +15,16 @@ function HomePage() {
                         <h2><div> Welcome to my portfolio</div></h2>
                     </p>
                     <div className="icons">
-                        <a href="https://www.facebook.com/profile.php?id=100009302766028" target="_blank" className="icon i-facebook">
+                        <a href="https://www.facebook.com/profile.php?id=100009302766028" rel="noopener noreferrer" target="_blank" className="icon i-facebook">
                             <FacebookIcon />
                         </a>
-                        <a href="https://twitter.com/Prakash19122000" target="_blank" className="icon i-twitter">
+                        <a href="https://twitter.com/Prakash19122000" rel="noopener noreferrer" target="_blank" className="icon i-twitter">
                             <TwitterIcon />
                         </a>
-                        <a href="https://github.com/prakashpandey1912" target="_blank" className="icon i-github">
+                        <a href="https://github.com/prakashpandey1912" rel="noopener noreferrer" target="_blank" className="icon i-github">
                             <GithubIcon />
                         </a>
-                        <a href="https://www.linkedin.com/in/prakash-pandey-b10143170/" target="_blank" className="icon i-linkedin">
+                        <a href="https://www.linkedin.com/in/prakash-pandey-b10143170/" rel="noopener noreferrer" target="_blank" className="icon i-linkedin">
                             <LinkedInIcon />
                         </a>
 

@@ -167,10 +167,12 @@ h6{
   //Nav Toggler
   .ham-burger-menu{
       position: absolute;
-      right: 5%;
+      right: 15%;
       top: 3%; 
-      display: none;
+      display: block;
       z-index: 15;
+      width:5%;
+
       svg{
           font-size: 3rem;
       }
@@ -183,6 +185,8 @@ h6{
   @media screen and (max-width:1200px){
     .ham-burger-menu{
         display: block;
+        right: 15%;
+        // width:100%
     }
   }
 

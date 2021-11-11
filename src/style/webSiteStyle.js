@@ -140,6 +140,20 @@ h6{
 .u-margin-bottom{
     margin-bottom: 4rem;
 }
+.btn{
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    color: black;
+    font-size: 16px;
+    padding: 16px 30px;
+    cursor: pointer;
+    text-align: center;
+    }
+    .btn:hover {
+        background-color: black;
+        color: white;
+        padding-right: 25px;
+    }    
 .centerDiv{
     margin: 0 auto;
     text-align: center;

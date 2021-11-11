@@ -2,35 +2,56 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import GithubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import { useEffect } from 'react';
+import Loading from '../../component/loader/Loading';
+import store from '../../store/store';
 
-function HomePage() {
+function HomePage(props) {
+    const navigate = useNavigate();
+    useEffect(() => {
+
+        setTimeout(() => {
+            store.dispatch({
+                type: 'FIRST', payload: {
+                    firstTime: false
+                }
+            })
+        }, 5000)
+    }, [])
     return (
         <>
-            <HomePageStyled>
-                <div className="typography">
-                    <h2 style={{ paddingTop: "100px" }} ><div>Hello Everybody, I am</div><span>Prakash Pandey</span><br /><div> Full Stack Developer</div></h2>
-                    <p className="dataHomePage">
-                        <h2><div> Welcome to my portfolio</div></h2>
-                    </p>
-                    <div className="icons">
-                        <a href="https://www.facebook.com/profile.php?id=100009302766028" rel="noopener noreferrer" target="_blank" className="icon i-facebook">
-                            <FacebookIcon />
-                        </a>
-                        <a href="https://twitter.com/Prakash19122000" rel="noopener noreferrer" target="_blank" className="icon i-twitter">
-                            <TwitterIcon />
-                        </a>
-                        <a href="https://github.com/prakashpandey1912" rel="noopener noreferrer" target="_blank" className="icon i-github">
-                            <GithubIcon />
-                        </a>
-                        <a href="https://www.linkedin.com/in/prakash-pandey-b10143170/" rel="noopener noreferrer" target="_blank" className="icon i-linkedin">
-                            <LinkedInIcon />
-                        </a>
+            {store.getState().app.firstTime ? (<Loading />) : (
+                <HomePageStyled>
+                    <div className="typography">
+                        <h2 style={{ paddingTop: "100px" }} ><div>Hello Everybody, I am</div><span>Prakash Pandey</span><br /><div> Full Stack Developer</div></h2>
+                        <p className="dataHomePage">
+                            <h2><div> Welcome to my portfolio</div></h2>
+                        </p>
+                        <br />
+                        <button className="btn" onClick={() => {
+                            navigate('/about')
+                            console.log("clickS")
+                        }}>Lets Explore<span> »</span></button>
+                        <div className="icons">
+                            <a href="https://www.facebook.com/profile.php?id=100009302766028" rel="noopener noreferrer" target="_blank" className="icon i-facebook">
+                                <FacebookIcon />
+                            </a>
+                            <a href="https://twitter.com/Prakash19122000" rel="noopener noreferrer" target="_blank" className="icon i-twitter">
+                                <TwitterIcon />
+                            </a>
+                            <a href="https://github.com/prakashpandey1912" rel="noopener noreferrer" target="_blank" className="icon i-github">
+                                <GithubIcon />
+                            </a>
+                            <a href="https://www.linkedin.com/in/prakash-pandey-b10143170/" rel="noopener noreferrer" target="_blank" className="icon i-linkedin">
+                                <LinkedInIcon />
+                            </a>
 
+                        </div>
                     </div>
-                </div>
-            </HomePageStyled>
+                </HomePageStyled>)
+            }
         </>
     );
 
@@ -43,7 +64,7 @@ const HomePageStyled = styled.header`
    .dataHomePage{
     display: flex;
     justify-content: center;
-    margin-top: 10rem;
+    margin-top: 8rem;
    }
 
     .typography{
@@ -58,7 +79,7 @@ const HomePageStyled = styled.header`
         .icons{
             display: flex;
             justify-content: center;
-            margin-top: 12rem;
+            margin-top: 8rem;
             .icon{
                 border: 2px solid var(--border-color);
                 display: flex;
@@ -95,10 +116,10 @@ const HomePageStyled = styled.header`
         }
         @media screen and (max-width:1200px){
             .icons{
-                margin-top: 8rem;
+                margin-top: 7rem;
             }
             .dataHomePage{
-                margin-top:8rem;
+                margin-top:6rem;
             }
         }
     }

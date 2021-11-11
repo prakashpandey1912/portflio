@@ -1,6 +1,7 @@
 const INIT_STATE = {
-    currentRoute: '/',
+    currentRoute: '/loader',
     pageLoading: true,
+    firstTime: true,
 }
 
 const AppReducer = (state = INIT_STATE, { type, payload }) => {
@@ -8,7 +9,7 @@ const AppReducer = (state = INIT_STATE, { type, payload }) => {
         case 'ROUTE_CHANGE':
             return {
                 ...state,
-                currentRoute: payload.route,
+                currentRoute: payload.currentRoute,
                 pageLoading: true
             }
         case 'LOADING_START': {
@@ -22,6 +23,12 @@ const AppReducer = (state = INIT_STATE, { type, payload }) => {
                 ...state,
                 pageLoading: false
             }
+        case 'FIRST': {
+            return {
+                ...state,
+                firstTime: payload.firstTime
+            }
+        }
         default:
             return state
     }

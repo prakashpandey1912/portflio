@@ -50,8 +50,8 @@ function Contact() {
                                 {/* <PrimaryButton disabled title={'Send Email'} /> */}
                             </div>
                         </form>
-                        <div className="form-field">
-                            <button onClick={onSubmit}>Send Data</button>
+                        <div className="centerDiv">
+                            <button className="btn " onClick={onSubmit}>Send Data</button>
                         </div>
                     </div>
                     <div className="right-content">
@@ -146,10 +146,12 @@ const ContactPageStyled = styled.section`
                     width: 100%;
                     padding: .7rem 1rem;
                 }
+                
             }
 
             
         }
+        
     }
 `;
 

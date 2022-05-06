@@ -33,27 +33,27 @@ function App(props) {
     let items = [
       <Link to="/">
         <i className="fa fa-fw" />
-        <span>Home</span>
+        <span style={{ color: "var(--font-light-color)" }}>Home</span>
       </Link>,
       <Link to="/about">
         <i className="fa fa-fw" />
-        <span>About</span>
+        <span style={{ color: "var(--font-light-color)" }}>About</span>
       </Link>,
-      <Link to="/portfolios">
+      <Link to="/portfolio">
         <i className="fa fa-fw" />
-        <span>Portfolios</span>
+        <span style={{ color: "var(--font-light-color)" }}>Portfolio</span>
       </Link>,
       <Link to="/blogs">
         <i className="fa fa-fw" />
-        <span>Blogs</span>
+        <span style={{ color: "var(--font-light-color)" }}>Blogs</span>
       </Link>,
-      <Link to="/resume">
-        <i className="fa fa-fw" />
-        <span>Resume</span>
-      </Link>,
+      // <Link to="/resume">
+      //   <i className="fa fa-fw" />
+      //   <span style={{ color: "var(--font-light-color)" }}>Resume</span>
+      // </Link>,
       <Link to="/contact">
         <i className="fa fa-fw" />
-        <span>Contact</span>
+        <span style={{ color: "var(--font-light-color)" }}>Contact</span>
       </Link>
     ];
     return items;
@@ -65,7 +65,7 @@ function App(props) {
       <>
         <Menu
           id="Slide"
-          customOpenIcon={<MenuIcon />}
+          customOpenIcon={<MenuIcon style={{ background: "white" }} />}
           customCrossIcon={<CancelIcon />}
           pageWrapId={'page-wrap'}
           outerContainerId={'outer-container'}
@@ -91,9 +91,9 @@ function App(props) {
             <Routes>
               <Route path="/" exact element={<HomePage currentRoute={props.currentRoute} />} />
               <Route path="/about" exact element={<AboutPage />} />
-              <Route path="/portfolios" exact element={<Portfolio />} />
+              <Route path="/portfolio" exact element={<Portfolio />} />
               <Route path="/blogs" exact element={<Blogs />} />
-              <Route path="/resume" exact element={<Resume />} />
+              {/* <Route path="/resume" exact element={<Resume />} /> */}
               <Route exact path="/contact" element={<Contact />} />
               <Route exact path="/loader" element={<Loading currentRoute={props.currentRoute} />} />
             </Routes>

@@ -41,7 +41,7 @@ const WebSiteStyle = createGlobalStyle`
     --scrollbar-track-color: #383838;
 }
 .dark{
-    --primary-color: #007bff;
+    --primary-color: #FFCCAA;
     --primary-color-light: #057FFF;
     --secondary-color: #6c757d;
     --background-dark-color: #10121A;
@@ -50,7 +50,7 @@ const WebSiteStyle = createGlobalStyle`
     --background-light-color: #F1F1F1;
     --background-light-color-2: rgba(3,127,255,.3);
     --white-color: #FFF;
-    --font-light-color: #a4acc4;
+    --font-light-color: #FFF;
     --font-dark-color: #313131;
     --font-dark-color-2: #151515;
     --sidebar-dark-color: #191D2B;
@@ -67,13 +67,14 @@ const WebSiteStyle = createGlobalStyle`
     text-decoration: none;
     font-family: 'Nunito', sans-serif;
     font-size: 1.1rem;
-    
+    overflow-x: hidden;
 }
 
 body{
     background-color: var(--background-dark-color);
     color: var(--font-light-color);
     transition: all .4s ease-in-out;
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar{
@@ -87,6 +88,7 @@ body::-webkit-scrollbar-thumb{
 body::-webkit-scrollbar-track{
     border-radius: 10px;
     background-color: #383838;
+
 }
 
 textarea{
@@ -112,7 +114,9 @@ h1{
         font-size: 3rem
     }
 }
-
+.bm-burger-bars{
+    background:var(--font-light-color)
+}
 h2{
     font-size: 3rem;
     // color: var(--white-color);

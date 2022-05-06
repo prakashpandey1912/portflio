@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const MainLayout = styled.div`
-    padding: 5rem;
+    padding: 2rem;
     width:100%;
     @media screen and (max-width: 642px){
         padding: 4rem;

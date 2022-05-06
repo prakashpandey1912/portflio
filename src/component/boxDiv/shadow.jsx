@@ -3,32 +3,36 @@ import styled from "styled-components";
 
 function Shadow(props) {
 
-    // useEffect(() => {
-    // }, [])
+  // useEffect(() => {
+  // }, [])
 
-    const readMore = () => {
-        window.open(props.obj.readMore, "_blank")
-    }
+  const readMore = () => {
+    window.open(props.obj.readMore, "_blank")
+  }
 
-    return (
-        <>
-            <ShadowStyle style={shadowStyle}>
-                <div className="card card-1">
-                    <div>{props.obj.title}</div>
-                    <img className="imgBox" src={props.obj.img} />
-                    <div onClick={readMore}>Read More</div>
-                </div>
-            </ShadowStyle>
-        </>
-    )
+  return (
+    <>
+      <ShadowStyle style={shadowStyle}>
+        <div className="card card-1">
+          <br />
+          <div>{props.obj.title}</div>
+          <img className="imgBox" src={props.obj.img} />
+          <br />
+          <br />
+          <br />
+          <div onClick={readMore}>Read More</div>
+        </div>
+      </ShadowStyle>
+    </>
+  )
 }
 const shadowStyle = {
-    "width": "400px"
+  "width": "400px"
 };
 const ShadowStyle = styled.section`
 
 .card {
-    background: #fff;
+    background: #000;
     border-radius: 2px;
     display: inline-block;
     height: 300px;

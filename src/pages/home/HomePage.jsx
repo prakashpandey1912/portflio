@@ -25,9 +25,9 @@ function HomePage(props) {
             {store.getState().app.firstTime ? (<Loading />) : (
                 <HomePageStyled>
                     <div className="typography">
-                        <h2 style={{ paddingTop: "100px" }} ><div>Hello Everybody, I am</div><span>Prakash Pandey</span><br /><div> Full Stack Developer</div></h2>
+                        <h2 style={{ paddingTop: "100px" }} ><div>Hello Everybody, I am</div><span>Prakash Pandey</span><br /><div> Senior Software Engineer</div></h2>
                         <p className="dataHomePage">
-                            <h2><div> Welcome to my portfolio</div></h2>
+                            <h2><div> Welcome to my portfolio website</div></h2>
                         </p>
                         <br />
                         <button className="btn" onClick={() => {

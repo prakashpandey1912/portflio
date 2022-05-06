@@ -21,7 +21,9 @@ const WebSiteStyle = createGlobalStyle`
     --scrollbar-track-color: #383838;
 
 } */
-
+::-webkit-scrollbar {
+    display: none;
+}
 .light{
     --primary-color: #007bff;
     --primary-color-light: #057FFF;

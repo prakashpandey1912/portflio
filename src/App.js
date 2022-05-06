@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Routes, Route, BrowserRouter, Navigate, useNavigate, Redirect } from 'react-router-dom';
 import styled from 'styled-components';
 import BurgerMenu from 'react-burger-menu'
@@ -24,28 +24,33 @@ import Blogs from './pages/blogs/Blogs'
 
 function App(props) {
   //const [webSiteTheme, setTheme] = useState('dark')
+  const [menuOpenState, setMenuOpenState] = useState(false)
   useEffect(() => {
     console.clear();
     document.documentElement.className = 'dark';
   }, []);
 
+  const closeMenu = () => {
+    document.getElementById("react-burger-cross-btn").click();
+  }
+
   function getItems() {
     let items = [
       <Link to="/">
         <i className="fa fa-fw" />
-        <span style={{ color: "var(--font-light-color)" }}>Home</span>
+        <span onClick={closeMenu} style={{ color: "var(--font-light-color)" }}>Home</span>
       </Link>,
       <Link to="/about">
         <i className="fa fa-fw" />
-        <span style={{ color: "var(--font-light-color)" }}>About</span>
+        <span onClick={closeMenu} style={{ color: "var(--font-light-color)" }}>About</span>
       </Link>,
       <Link to="/portfolio">
         <i className="fa fa-fw" />
-        <span style={{ color: "var(--font-light-color)" }}>Portfolio</span>
+        <span onClick={closeMenu} style={{ color: "var(--font-light-color)" }}>Portfolio</span>
       </Link>,
       <Link to="/blogs">
         <i className="fa fa-fw" />
-        <span style={{ color: "var(--font-light-color)" }}>Blogs</span>
+        <span onClick={closeMenu} style={{ color: "var(--font-light-color)" }}>Blogs</span>
       </Link>,
       // <Link to="/resume">
       //   <i className="fa fa-fw" />
@@ -53,7 +58,7 @@ function App(props) {
       // </Link>,
       <Link to="/contact">
         <i className="fa fa-fw" />
-        <span style={{ color: "var(--font-light-color)" }}>Contact</span>
+        <span onClick={closeMenu} style={{ color: "var(--font-light-color)" }}>Contact</span>
       </Link>
     ];
     return items;
